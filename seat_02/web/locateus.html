@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>ABC Cinema</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Cookie.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css" />
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css" />
+    <link rel="stylesheet" href="assets/css/Pretty-Footer-.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <style>
+      .dealer {
+        padding: 1rem 1rem;
+        margin: 1rem 1rem;
+      }
+      .dealer tbody {
+        column-width: 1rem;
+        padding: 1rem 2rem;
+        margin: 1rem 2rem;
+      }
+      .dealer tbody tr {
+        column-width: 1rem;
+
+        padding: 2rem 2rem;
+        margin: 2rem 1rem;
+      }
+      .dealer tbody th {
+        width: 3rem;
+
+        /* padding: 1rem 1rem; */
+        margin-left: 0;
+      }
+
+      .dealer-spacer {
+        margin-left: 1rem;
+      }
+
+      .dealer-table {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .map-container {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+      .map-container iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body class="text-start">
+    <!-- Start: Navbar Centered Links -->
+    <nav
+      class="navbar navbar-light navbar-expand-md sticky-top bg-white text-center d-xl-flex flex-row py-3"
+      style="padding-bottom: 0px; margin-bottom: 10px"
+    >
+      <div class="container">
+        <button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span></button
+        ><a href="home.html"
+          ><img
+            class="img-fluid"
+            width="181"
+            height="45"
+            src="assets/img/new%20logo.png"
+            style="text-align: left"
+        /></a>
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navcol-1"
+          style="margin-right: 50px"
+        >
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="home.html">Home</a>
+            </li>
+            <li class="nav-item fw-semibold">
+              <a class="nav-link active fw-semibold" href="aboutus.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item fw-semibold">
+              <a class="nav-link active fw-semibold" href="contactus.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item fw-semibold">
+              <a
+                class="nav-link active fw-semibold active-page"
+                href="locateus.html"
+                >Locate Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End: Navbar Centered Links -->
+    <div></div>
+    <!-- <div class="row">
+        <div class="col-2">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Our Locations:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6">
+            <ul class="list-unstyled">
+                <li style="padding-top: 2px;">One Galle Face<br></li>
+                <li style="padding-top: 2px;">Unity Plaza<br></li>
+                <li style="padding-top: 2px;">Majestic City<br></li>
+                <li style="padding-top: 2px;">Colombo City Center<br></li>
+                <li style="padding-top: 2px;">Marino Mall<br></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <div class="dealer">
+      <h2>Our Theater Locations:</h2>
+      <table class="dealer-table">
+        <tr class="dealer-header">
+          <!-- <th>Province</th> -->
+          <th>City</th>
+          <th>Location</th>
+        </tr>
+        <tr>
+          <!-- <td>Western</td> -->
+          <td>Colombo 3</td>
+          <td>One Galle Face</td>
+        </tr>
+        <tr>
+          <!-- <td>Western</td> -->
+          <td>Colombo 7</td>
+          <td>Unity Plaza</td>
+        </tr>
+        <tr>
+          <!-- <td>Western</td> -->
+          <td>Colombo 5</td>
+          <td>Colombo City Center</td>
+        </tr>
+      </table>
+    </div>
+
+    <!--Google map-->
+    <div
+      id="map-container-google-1"
+      class="z-depth-1-half map-container"
+      style="height: 500px"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.5757962996818!2d80.0393842152317!3d6.821334421520518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1649405487820!5m2!1sen!2slk"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!--Google Maps-->
+
+    <div class="container-fluid"></div>
+    <!-- Start: Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 footer-navigation">
+          <h3 style="font-family: Montserrat, sans-serif">
+            ABC&nbsp;<span style="color: #ff2211">Cinema</span>
+          </h3>
+          <p class="links">
+            <a href="home.html">Home</a><strong>&nbsp;· </strong
+            ><a href="aboutus.html">About Us</a><strong> · </strong
+            ><a href="contactus.html">Contact Us</a><strong> · </strong
+            ><a href="locateus.html">Locate Us</a><strong> · </strong>
+          </p>
+          <p class="company-name">ABC Cinema&nbsp; © 2023</p>
+        </div>
+        <div class="col-sm-6 col-md-4 footer-contacts">
+          <div>
+            <span class="fa fa-map-marker footer-contacts-icon"> </span>
+            <p>
+              <span class="new-line-span">No.21 Main Street</span> Colombo, Sri
+              Lanka
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-phone footer-contacts-icon"></i>
+            <p class="footer-center-info email text-start">+1 999 123456</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope footer-contacts-icon"></i>
+            <p>
+              <a href="mailto:inquiries@abccinema.com" target="_blank"
+                >inquiries@abccinema.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 footer-about">
+          <h4>About the company</h4>
+          <p>
+            Entertainment for everyone. Our theater makes the movie more
+            exciting.
+          </p>
+          <div class="social-links social-icons">
+            <a href="https://www.facebook.com/"
+              ><i class="fa fa-facebook"></i></a
+            ><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a
+            ><a href="https://lk.linkedin.com/"
+              ><i class="fa fa-linkedin"></i></a
+            ><a href="https://github.com/"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End: Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+  </body>
+</html>

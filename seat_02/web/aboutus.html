@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>ABC Cinema</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Cookie.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css" />
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css" />
+    <link rel="stylesheet" href="assets/css/Pretty-Footer-.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <style>
+      body {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        margin: 0;
+        /* font-size: 18px; */
+        background-color: #ffffff;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+        font-size: 16px;
+        padding: 1rem;
+
+        /* fixing text overflow heigh change in cards */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: #f9f6f0;
+        background-color: #fff;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 0 16px;
+        background-color: #fff;
+      }
+
+      .statement p {
+        background-color: #fff;
+      }
+
+      .info-card {
+        font-size: 14px;
+        padding: 1rem;
+        /* fixing text overflow heigh change in cards */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .info-card h2 {
+        background-color: #fff;
+        font-size: 28px;
+      }
+
+      .info-card h2 p {
+        background-color: #fff;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Start: Navbar Centered Links -->
+    <nav
+      class="navbar navbar-light navbar-expand-md sticky-top bg-white text-center d-xl-flex flex-row py-3"
+      style="padding-bottom: 0px; margin-bottom: 10px"
+    >
+      <div class="container">
+        <button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span></button
+        ><a href="home.html"
+          ><img
+            class="img-fluid"
+            width="181"
+            height="45"
+            src="assets/img/new%20logo.png"
+            style="text-align: left"
+        /></a>
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navcol-1"
+          style="margin-right: 50px"
+        >
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="home.html">Home</a>
+            </li>
+            <li class="nav-item fw-semibold">
+              <a
+                class="nav-link active fw-semibold active-page"
+                href="aboutus.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item fw-semibold">
+              <a class="nav-link active fw-semibold" href="contactus.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item fw-semibold">
+              <a class="nav-link active fw-semibold" href="locateus.html"
+                >Locate Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End: Navbar Centered Links -->
+
+    <div class="statement" style="text-align: center">
+      <div class="vision shadow-lg p-3 mb-5">
+        <h1>Our Vision</h1>
+        <ul>
+          <li>
+            Our vision is to become the premier destination for movie
+            enthusiasts to easily plan and purchase tickets for their favorite
+            films.
+          </li>
+        </ul>
+      </div>
+      <div class="mission shadow-lg p-3 mb-5">
+        <h1>Our Mission</h1>
+        <ul>
+          <li>
+            We are committed to provide a seamless and convenient online
+            platform for moviegoers to discover and book tickets for the latest
+            releases, while offering a wide selection of showtimes and theaters.
+            We strive to enhance the movie-going experience by offering special
+            promotions and deals, and continuously improving our website and
+            mobile app to make the booking process as easy and
+            efficient as possible.
+          </li>
+        </ul>
+      </div>
+
+      <h1 class="team-info" style="text-align: center"><i>Our Team</i></h1>
+
+      <div class="row justify-content-center">
+        <div class="column">
+          <div class="card">
+            <img
+              src="assets/img/mindula.jpg"
+              alt="Mindula"
+              style="width: 100%"
+            />
+            <div class="container info-card">
+              <h2>Mindula Silva</h2>
+              <p class="title">Group Leader</p>
+              <p>hmjsilva@students.nsbm.ac.lk</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="assets/img/venura.jpg" alt="Venura" style="width: 100%" />
+            <div class="container info-card">
+              <h2>Venura Deegalla</h2>
+              <p class="title">Member</p>
+              <p>vodeegalla@students.nsbm.ac.lk</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="assets/img/sean.jpg" alt="Shaun" style="width: 100%" />
+            <div class="container info-card">
+              <h2>Shaun Hennedige</h2>
+              <p class="title">Member</p>
+              <p>shthennedige@students.nsbm.ac.lk</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="column">
+            <div class="card">
+              <img src="assets/img/dc.jpg" alt="Dileep" style="width: 100%" />
+              <div class="container info-card">
+                <h2>Dileep Abeysinghe</h2>
+                <p class="title">Member</p>
+                <p>amdcabeysinghe@students.nsbm.ac.lk</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img
+                src="assets/img/sajith.jpg"
+                alt="Sajith"
+                style="width: 100%"
+              />
+              <div class="container info-card">
+                <h2>Sajith Rathnayake</h2>
+                <p class="title">Member</p>
+                <p>rmscrathnayaka@students.nsbm.ac.lk</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start: Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 footer-navigation">
+          <h3 style="font-family: Montserrat, sans-serif">
+            ABC&nbsp;<span style="color: #ff2211">Cinema</span>
+          </h3>
+          <p class="links">
+            <a href="home.html">Home</a><strong>&nbsp;· </strong
+            ><a href="aboutus.html">About Us</a><strong> · </strong
+            ><a href="contactus.html">Contact Us</a><strong> · </strong
+            ><a href="locateus.html">Locate Us</a><strong> · </strong>
+          </p>
+          <p class="company-name">ABC Cinema&nbsp; © 2023</p>
+        </div>
+        <div class="col-sm-6 col-md-4 footer-contacts">
+          <div>
+            <span class="fa fa-map-marker footer-contacts-icon"> </span>
+            <p>
+              <span class="new-line-span">No.21 Main Street</span> Colombo, Sri
+              Lanka
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-phone footer-contacts-icon"></i>
+            <p class="footer-center-info email text-start">+1 999 123456</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope footer-contacts-icon"></i>
+            <p>
+              <a href="mailto:inquiries@abccinema.com" target="_blank"
+                >inquiries@abccinema.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 footer-about">
+          <h4>About the company</h4>
+          <p>
+            Entertainment for everyone. Our theater makes the movie more
+            exciting.
+          </p>
+          <div class="social-links social-icons">
+            <a href="https://www.facebook.com/"
+              ><i class="fa fa-facebook"></i></a
+            ><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a
+            ><a href="https://lk.linkedin.com/"
+              ><i class="fa fa-linkedin"></i></a
+            ><a href="https://github.com/"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End: Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Your Movie Seat Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            button{
+                visibility: hidden;
+                cursor: pointer;
+                opacity: 0.9;
+                transition: all 0.15s ease;
+                background-color: #ff2211 !important;
+                border: none;
+                border-radius: 6px;
+                margin: 15px;
+                padding: 15px;
+                color: #FFFFFF;
+            }
+
+            #submit{
+                cursor: pointer;
+                opacity: 0.9;
+                transition: all 0.15s ease;
+                background-color: #04aa6d !important;
+                border: none;
+                border-radius: 6px;
+                margin: 15px;
+                padding: 15px;
+                color: #FFFFFF;
+            }
+
+            #submit:hover{
+                font-weight: bold;
+                color: black;
+                transform: translateY(-3px) scale(1.005); 
+            }
+
+
+            button:hover{
+                font-weight: bold;
+                color: black;
+                transform: translateY(-3px) scale(1.005);
+            }
+
+
+            .cancel input{
+                cursor: pointer;
+                opacity: 0.9;
+                transition: all 0.15s ease;
+                background-color: #ff2211 !important;
+                border: none;
+                border-radius: 6px;
+                margin: 15px;
+                padding: 15px;
+                color: #FFFFFF;
+
+            }
+
+            .submit{
+                max-width: 50%;
+                padding: auto;
+                margin: auto;
+                text-align: right;
+            }
+
+            .cancel input:hover{
+                font-weight: bold;
+                color: black;
+                transform: translateY(-3px) scale(1.005); 
+            }
+
+            .table{
+                max-width: 50%;
+                margin: auto;
+                border-bottom-width: none !important;
+            }
+
+            table tbody tr td{
+
+                border-bottom-width: none !important;
+            }
+            .card{
+                margin-bottom: 25px;
+            }
+
+        </style>
+
+        <script>
+            window.onload = function () {
+                // Get the selected seats from the query parameter
+                var urlParams = new URLSearchParams(window.location.search);
+                var selectedSeats = urlParams.get('selectedSeats').split(',');
+                var url = new URL(window.location.href);
+                var count = url.searchParams.get("count");
+                // Display the selected seats
+                var seatsDiv = document.getElementById("selected-seats");
+                for (var i = 0; i < selectedSeats.length; i++) {
+                    var seat = document.createElement("div");
+                    seat.innerHTML = selectedSeats[i];
+                    seatsDiv.appendChild(seat);
+                }
+            }
+
+            //        var url = new URL(window.location.href);
+//         var count = url.searchParams.get("count");
+        </script>
+
+
+    </head>
+    <body onload="retrieveSelectedValues();
+            updateSelectedValue();
+          ">
+
+
+        <p id="example"></p>
+
+        <form action="index.jsp" method="POST">
+            <center>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@.V1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Avatar 2</h5>
+                        <p>Date:<p id="card-text-date"> </p></p>
+                        <p>Time:<p id="card-text-time"> </p></p>
+                        <h5>Your Seat Numbers</h5>
+                        <p id="selected-seats"></p>
+
+
+                    </div>
+                </div>
+
+                <div id="paypal-button-container" style="max-width:300px;"></div>
+                <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD&intent=capture&enable-funding=venmo"></script>
+
+                <script>
+        const seatCount = localStorage.getItem("seatCount").toString();
+        const paypalButtonsComponent = paypal.Buttons({
+            style: {
+                color: "gold",
+                shape: "pill",
+                layout: "vertical"
+            },
+
+            createOrder: (data, actions) => {
+                const createOrderPayload = {
+                    purchase_units: [
+                        {
+                            amount: {
+                                value: "20"
+                            }
+                        }
+                    ]
+                };
+
+                return actions.order.create(createOrderPayload);
+            },
+
+            onApprove: (data, actions) => {
+                return actions.order.capture().then((details) => {
+                    console.log('Transaction completed');
+                });
+            },
+
+            onError: (err) => {
+                console.error('An error prevented the buyer from checking out with PayPal');
+            }
+        });
+
+        paypalButtonsComponent.render("#paypal-button-container").catch((err) => {
+            console.error('PayPal Buttons failed to render');
+        });
+                </script>
+                <div class="cancel"><input  type="submit" value="Cancel Reservation"></div>
+
+        </form>
+
+        <form action="sendMail" method="POST">
+            <table class="table table-hover">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" required="" placeholder="Name" name="name" class="form-control"></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" required="" placeholder="Email" name="email" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="text" required="" placeholder="PhoneNumber" name="phoneNumber" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Feedback</td>
+                    <td><input type="text" required=""  placeholder="Your Feedback" class="form-control" name="feedback"></td>
+                </tr>
+
+
+
+            </table>
+            <div class="cancel submit"><input type="submit" id="submit" class="btn btn-primary" value="Submit"></div>
+
+        </form>
+    </center>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+
+
+
+
+    </script>
+    <script>
+
+//        function updatecard() {
+//
+//
+//            // Get the form elements
+//            const dateSelect = document.getElementById("date");
+//            const timeSelect = document.getElementById("time");
+//
+//            // Get the selected values
+//            const selectedDate = dateSelect.value;
+//            const selectedTime = timeSelect.value;
+//
+//
+//
+//            document.getElementById("card-text-date").innerHTML = selectedDate;
+//            document.getElementById("card-text-time").innerHTML = selectedTime;
+//
+//            event.preventDefault();
+//
+//        }
+//        form.addEventListener('submit', updatecard);
+
+
+
+        function retrieveSelectedValues() {
+            var stringifiedseatArray = localStorage.getItem("selectedSeatsarray");
+            const selectedSeatsarray = JSON.parse(stringifiedseatArray);
+//            var arrayAsString = array.join(selectedSeatsarray);
+            document.getElementById("selected-seats").innerHTML = selectedSeatsarray;
+
+
+            var selectedDate = localStorage.getItem("selectedDate");
+            var selectedTime = localStorage.getItem("selectedTime");
+
+
+            document.getElementById("card-text-date").innerHTML = selectedDate;
+            document.getElementById("card-text-time").innerHTML = selectedTime;
+            event.preventDefault();
+        }
+
+        //update selected seats using js
+//        function updateSelectedValue() {
+//
+//            
+//        }
+//        form.addEventListener('submit', updateSelectedValue);
+
+
+
+
+
+              
+
+        </script>
+
+
+</body>
+</html>

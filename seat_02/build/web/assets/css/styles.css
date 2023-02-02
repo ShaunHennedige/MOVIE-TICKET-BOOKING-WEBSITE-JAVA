@@ -1,0 +1,95 @@
+body {
+  background-color: #FFFFFF;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #f21 !important;
+}
+
+.active-page, .active-page:hover {
+  background-color: #ff2211;
+  /*font-size: large;*/
+  color: #F9F6F0 !important;
+  border-radius: 1ch;
+}
+
+.btn-primary, .btn-primary:focus learn-more {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.15s ease;
+  background-color: #ff2211 !important;
+}
+
+.learn-more:hover {
+  font-weight: bold;
+  color: black;
+  transform: translateY(-3px) scale(1.005);
+}
+
+.booknow-button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  /*width: 30%;*/
+  /*transition: all 0.15s ease;*/
+}
+
+.booknow-button:hover {
+  opacity: 1;
+  font-weight: bold;
+  color: black;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.statement {
+  margin-top: 20px;
+  padding: 1rem 2rem;
+  margin: 1rem 1rem;
+  /* border: 1px solid #343a40; */
+}
+
+.vision {
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  /* border: 1px solid #343a40; */
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 1.2rem;
+
+}
+.mission {
+
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border: 1px solid #343a40; */
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 1.2rem;
+
+}
+
+.vision ul {
+  list-style: none;
+}
+
+.mission ul {
+  list-style: none;
+}
+
+.mission ul li{
+  padding: 1rem 1rem;
+
+}
+.vision ul li{
+  padding: 1rem 1rem;
+
+}
+
+.team-info{
+  margin-top:3rem;
+  padding: 2rem 0;
+}
+
